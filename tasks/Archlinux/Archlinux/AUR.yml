@@ -1,0 +1,9 @@
+---
+# https://brave.com/linux/#arch
+# https://aur.archlinux.org/packages/brave-bin
+- name: Install Brave from AUR
+  kewlfft.aur.aur:
+    use: yay
+    name:
+      - brave-bin
+  become: true

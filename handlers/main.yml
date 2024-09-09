@@ -1,0 +1,4 @@
+- name: rpm import brave-core.asc
+  become: true
+  ansible.builtin.command: rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
+  

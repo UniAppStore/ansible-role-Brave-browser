@@ -1,0 +1,25 @@
+---
+# https://brave.com/linux/
+
+- name: prerequisite
+  become: true
+  ansible.builtin.dnf:
+    name: dnf-plugins-core
+    state: latest
+
+- name: Add repository
+  become: true
+  ansible.builtin.command: dnf config-manager --add-repo https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
+  args:
+    creates: /etc/yum.repos.d/brave-browser.repo
+  notify: rpm import brave-core.asc
+
+- name: flush handlers
+  ansible.builtin.meta: flush_handlers
+
+- name: Install Brave browser
+  become: true
+  ansible.builtin.dnf:
+    name:
+      - brave-browser
+    state: latest

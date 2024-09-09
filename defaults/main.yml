@@ -1,0 +1,7 @@
+in: "native"
+repository: true
+source: "download"
+
+ubuntu_default: snap
+
+archlinux_version: AUR

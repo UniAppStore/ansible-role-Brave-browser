@@ -1,0 +1,10 @@
+---
+# https://brave.com/linux/
+
+- name: alt install source
+  include_tasks: 'from:/{{ source }}/main.yml'
+  when: in == "native" and not repository
+
+- name: install from repository
+  include_tasks: repository.yml
+  when: repository

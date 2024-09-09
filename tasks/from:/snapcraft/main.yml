@@ -1,0 +1,6 @@
+- name: install Brave Snap
+  community.general.snap:
+    name:
+      - brave
+    classic: true
+  become: true
