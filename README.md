@@ -3,7 +3,14 @@ Brave browser
 
 https://brave.com/linux/
 
+```
+# Arch
+yay -Sy brave-bin
+```
+
 https://aur.archlinux.org/packages/brave-bin
+
+sch: https://www.google.com/search?q=brave+browser+arch+linux
 
 Requirements
 ------------
