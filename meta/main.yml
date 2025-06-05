@@ -30,4 +30,4 @@ galaxy_info:
     #       Maximum 20 tags per role.
 
 dependencies:
-- UniInc.Yay-AUR-package-manager
+- UniInc.UniInc.Yay-AUR-package-manager
